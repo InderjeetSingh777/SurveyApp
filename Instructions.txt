@@ -1,8 +1,8 @@
 Requirements: Python 3.5.0 , django :2.1.7 ,crispy_forms(install using pip install --upgrade django-crispy-forms)
 
 Steps to execute:
-1.Unzip the scripts file.
-2.Using command line : go to scripts->survey
+1.Unzip the  file.
+2.Using command line : go to SurveyApp->survey
 3.python manage.py runserver ..the server starts at the https://127.0.0.1:8000
  
 Some login accounts: for all,password is : dare 
