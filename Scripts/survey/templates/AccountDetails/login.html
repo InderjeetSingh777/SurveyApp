@@ -1,0 +1,25 @@
+{% extends 'AccountDetails/base.html' %}
+
+{% block body_block %}
+
+<div class="container">
+    <div class="jumbotron">
+      <h1>Login to your Account</h1>
+
+        <form method="post" action="{% url 'AccountDetails:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <label for="email"><h3>Email:</h3></label>
+          <input type="email" name="email" placeholder="Email">
+          <br/>
+          <label for="password"><h3>Password</h3></label>
+          <input type="password" name="password">
+          <br/>
+          <button type="submit" class="btn btn-primary">Log In</button>
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}
+

@@ -1,0 +1,6 @@
+{% extends "AccountDetails/base.html" %}
+{% block body_block %}
+{% for item in obj %}
+<h1>{{item.name}}</h1>
+{% endfor %}
+{% endblock %}

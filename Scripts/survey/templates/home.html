@@ -1,0 +1,159 @@
+{% load static %}
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Politics</title>
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/main.css' %}" rel="stylesheet">
+		<link href="{% static 'css/linearicons.css' %}" rel="stylesheet">
+		<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+		<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+		<link href="{% static 'css/nice-select.css' %}" rel="stylesheet">
+		<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+		
+		</head>
+		<body>	
+			  <header id="header" id="home">
+		  		<div class="header-top">
+		  			<div class="container">
+				  		<div class="row">
+				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+				  				<ul>
+									<li><a href="https://www.facebook.com/profile.php?id=100028424562391"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/Inderje17802845"><i class="fa fa-twitter"></i></a></li>
+									
+				  				</ul>
+				  			</div>
+				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+				  				<a href="tel:+91 8872552755">+91-8872552755</a>
+				  				<a href="mailto:inderjeetnitj@gmail.com">inderjeetnitj@gmail.com</a>				
+				  			</div>
+				  		</div>			  					
+		  			</div>
+				</div>
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="{% url 'index' %}">Home</a></li>
+				          <li><a href="#about">About</a></li>		          
+			              <li><a href="#Levels">Level Hierarchy</a></li>				          
+				          
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+					<div class="overlay overlay-bg"></div>
+					<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-center">
+					<div class="banner-content col-lg-12 col-md-12">
+					<h6 class="text-uppercase"><strong>Welcome to Mobile-friendly platform for Government Campaign System.</strong></h6>
+					<h1>
+					
+					</h1>
+					<p class="text-white">
+					The motive of the system is to show the leaders a transparent view of the citizen’s concerns. Every leader or worker at each level is provided with a detailed dashboard showing the analytics based on the concerns and sentiments extracted from the citizens’ data. (reviews, complaints, suggestions etc). 
+					</p>
+					{% if user.is_authenticated %}
+					<a href="{% url 'AccountDetails:logout' %}" class="primary-btn header-btn text-uppercase">Logout</a>
+         			 {% else %}
+					<a href="{% url 'AccountDetails:signup' %}" class="primary-btn header-btn text-uppercase">Sign up </a>
+					<a href="{% url 'AccountDetails:user_login' %}"  class="primary-btn header-btn text-uppercase">Login </a>
+					{% endif %}
+					</div>
+					</div>
+					</div>
+			</section>
+			<!-- End banner Area -->	
+
+			<br/>
+			<br/>
+			<br/>
+
+			<!-- Start home-about Area -->
+			<section class="home-about-area section-gap relative" id="about">			
+				<div class="container">
+					<div class="row align-items-center justify-content-end">
+						<div class="col-lg-6 no-padding home-about-right">
+							<h1>
+								Who we are <br>
+								to Serve the nation
+							</h1>
+							<p>
+								We collect the data from the citizens which is analysed and presented to the ward,district,state and central Leaders ; who try to address the concerns of the citizens in the best way to bring a change in the nation by creating a better governance and democracy.
+							</p>
+							
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End home-about Area -->
+            <br/>
+            <br/>
+            <br/>
+			
+
+		    			
+
+			
+			<!-- start footer Area -->		
+			<footer class="footer-area section-gap" id="Levels">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="single-footer-widget">
+								<h6>Level Hierarchy</h6>
+								<ul class="footer-nav">
+									<li><a href="#">Level 1 (Central Level)&nbsp;&nbsp;&nbsp;:</a> The level has central leaders.</li>
+									<li><a href="#">Level 2 (State Level)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</a> This level comprises of the state leaders.</li>
+									<li><a href="#">Level 3 (District Level)&nbsp;&nbsp;&nbsp;:</a> This level has the district managers. The district managers can view the data of the people bases in his district. </li>
+									<li><a href="#">Level 4 (Ward Level)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</a> This level includes the ward managers. The ward manager is responsible for and has the complete visibility of the workers in his ward &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and the people’s reviews received within his ward.</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="col-lg-3  col-md-12">
+							<div class="single-footer-widget mail-chimp">
+								
+							</div>
+						</div>						
+					</div>
+
+					<div class="row footer-bottom d-flex justify-content-between align-items-center">
+						<p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+</p>
+						<div class="col-lg-4 col-sm-12 footer-social">
+							<a href="https://www.facebook.com/profile.php?id=100028424562391"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/Inderje17802845"><i class="fa fa-twitter"></i></a>
+							
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- End footer Area -->	
+        <script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}" type="text/javascript"></script>	
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/jquery.nice-select.min.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/jquery.counterup.min.js' %}" type="text/javascript"></script>
+		<script src="{% static 'js/main.js' %}" type="text/javascript"></script>							
+		
+		<script src="{% static 'js/easing.min.js' %}" type="text/javascript"></script>		
+		<script src="{% static 'js/hoverIntent.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/superfish.min.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/mn-accordion.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/waypoints.min.js' %}" type="text/javascript"></script>	
+		<script src="{% static 'js/mail-script.js' %}" type="text/javascript"></script>
+		<script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+		</body>
+	</html>
